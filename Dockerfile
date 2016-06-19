@@ -5,7 +5,7 @@ RUN echo 'deb-src http://http.debian.net/debian jessie main' >> /etc/apt/sources
 ENV DEBIAN_FRONTEND noninteractive
 
 #Setup build environment for libpam
-RUN apt-get update && apt-get -y build-dep pam
+RUN apt-get update && apt-get -y build-dep
 
 #Rebuild and istall libpam with --disable-audit option
 RUN export CONFIGURE_OPTS=--disable-audit \
